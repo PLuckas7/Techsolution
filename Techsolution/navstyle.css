@@ -1,15 +1,19 @@
+/* Reset básico de margens e padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    font-family: Arial, Helvetica, sans-serif;
+
+/* Estilo para o corpo */
+body {
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
-
 }
+
+/* Estilo do cabeçalho */
 header{
     background-image: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIALcAwwMBIgACEQEDEQH/xAAbAAEAAwEBAQEAAAAAAAAAAAAAAQIEAwUGB//EAE4QAAEDAgMEBQYKBgUNAQAAAAEAAgMEERIhMQUTQVEUIlJhgQZCcZKh0SMyYpGTo7HT4fAVU1RjwdJygoOF8RYXJDM2Q0VWdISUlaIH/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APw1ERAREQEREBERAREQSFphndg3Ze5oGbXA6LKiDXefXffXj3qQ6f8AX/Xj+ZZAhQbcUvGa/wDbj3q7XkNdjklOXVwyXF+9eeF1hlMTrEXaciEHoCRl2XdNgw9frZ37lLH9VuJ0uK+fW4Lm0NIxMOJvAq4CDoCSD1pNcs+Czy04zfEAObeXoWlrVcAjQ2Qec3S5Fyrj+itM9M4nFE23NvJchE/TDmggW4tHjdWGHsjwurCJ/EWVhG5BW54NRX3bkQeNwULsXG0ZD7lujbfFUCeTG94Ni8EO8UHJSpvfgtEETWt3046nms0Lz7u9BSOlmlZiYzqniSB9qt0Co7LfXb71zqJXSuxPIuMgBoByHcuSDV0Co7LfXb706BUcGNP9dvvWVEG5myqx56sTT/aN961w+TO158o6dh/7iMfa5eMiD6eLyD8pJR8HQwn01kA+166j/wDOPKrX9HQ2/wCup/518miD6z/Nz5VD/h8P/nU/86pJ5AeUsJ69DCPRWwH7Hr5ZSOKDZtPZtXsyoFNWwGKUtDhmCHA8QRkRkRlxBGoXCCF8z8IyA1PILTFK91KIqgPNK1/VfhvunHl6bZjjZcnb2B+ZBOoIzEg/Pj4hBsYwMaI2ZN1/xXUNWZj3SC8YvzHJdm7/AINQdmtXVrVnb0ng0eP+K6DpXZb+fFBoDTwXGan3bt7BYEagq7el8GNPze9XAreETfZ70GMYHxvdJfeHTkrOawhm6BvbrX4eha3S1cTcUjGtBy0Cr02b5PqoJZRyloONre4oq9Om+T6qlB4XQpyMgw3/AHjfenQajst+kb71mRBsbTiH4Sow2GkYeCXnw0HeuE8rpXYn66ADQDkO5ckQEREBERAREQEREBSNVCINrdo1rdmHZjamQUTpt+YL9UvAtit6Mlp2hT01DVvoRXRV1MLFtTT3wtJaDle2hNiF5K3bKrIKOSd1TQw1gkgfExspcN24jJ4sdR35IKfC00oN2k8HDNr2+nl7V6lJKydhc3I3zb2e5YxSVENDTz1tNK2gqXOEFQWZFzbB2E8e8LgN5TSXa4YtWkZteEHutaurWrHT7RpnRgvfuz2StDdoUQ1qGjwKDXG382V8UYydJGO4lebWbWiZGW0rw+Q+cBYMC8NuGWRxLmXsTikJzQfZB0Dm4TLFY5EYgvLrKZkUl4XtdGeAIuCvCbG1wi/1A3l8nOd1LHjmquDQ1xwwmzsOTnZ94z0QevhReO8Na4jDC7vDnW+1Qg9/a/kdWbL8kNm+UctTTvpq+TAyJuLG02cc7i3mlfNDVWc9zm4S5xHInJVCD6c+RtZ/kOPKzpNP0My7rc57y+LDytwXzBVi92HCXOI1sTkqoIREQEREBERBJGShEQEREBSNVCIOz5ZHxMjdK4xsvgYXEht9bDhddYZGFoimLsB0IzLDzHuWRSL8EGqSN0ZwyYXcQ7XF3gqlm9hpVoZmlu5nvujo4Zlh5ju5hUmY+F2Ekdz25hw7igsWFwtk0cgqiEXzcueN3aTG7tFB23DT53zKRTN7Tlw3j+DnJvJO05Bp6K3tO9iLPvZO05EHNERARFZBVEUnRBCIiAiIgIiICIiArNF79w5qqIJUIiCQtEMrC3dT33R0cBcsPMd3csykIOk8bojgdY9lzcw4cwVyWiOdrWYJY94waAutY9x/gr76l/ZPrSg4QxGVxAcxthfrusrbgkZyR+uF031L+yfWlN9S/sn1pQU3H7yP1woXTfUv7J9aVKDIiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIiICIiAiIgIvp/07S/8m7I8BU/eqj9sUrh/shssejpP3qD5tF7bqyCVwazyaomOJt1HVP8AGQrFJVQ3I/RtOwg5gOly+d6DCi1iphvlRQes/wDmXOeJoYJYjijJtc6tPI/nP50HBERARFIQQikqEBERAREQFIUKQgKFKhARFIQQikqEBERBdzQBk8HuF1VdIWCTK4B1zXQ03yh4IOBJLbcAbqq0Gmt5yjcfKQcF1hldE4kWIIs5p0cORU7n5SjdW85BaaJoYJYbmIm2erTyP5z+dcFoiLonEghwIs5p0I5FJoW4d5DcxE2z1aeR/P8AFBnRSRZQgIiICIiAiIgIiICIiAiIgIrxNMkjWNtdxAF17Xlb5L7S8k6+Oh2u2Js8kQmaI34hgJIHtaUHhIiILgOxgAHFfQLsXTgF+dmmx7itMlHK1xwhj8Oj8ViqmkmtbdNs7X4XX2oOLhUgvBabtGJ2WgTBUuczqOLpBdgw6juWz9F7QcL9Fd1h+tGY+dDszaAI/wBGNxkLyjL0ZoPPDnuNrj5tF0EUjhdkUr2nRzW5H2L0qHZEplvVMEcYNyzECXL1qneCAspiGvPxDwCD5fcy/s84/q/gjHSQOIcxwvk6N4+OF70nSbw4ZGmwG9FtT3e1Z6gQ1zXtAcDG62K2hQeRLE0N3sV3RE2z1YeR/Oa6bRoehR0rul0s/SIRNankxGK9+q/LJ2WneqneU0zmvALrWe3zXtWnZ7qOkroayqo+nUDXfCUxlMZOWTS4ac++yDy0Wl9NM6ndWNp5BS7zdmUMOBryCQ3FpewvbXJZ0EIiIJAJ0RQiAiIgIiICIiCWktcCDYhaa+urNoSCWvq6iqkaMIfPIXuA5XJKzN1Wjoc2hEbTydI0H5roMyLT0ObnF9Kz3og9cuUa6mymOF8pa2MYieA830rU+mghaDK9+eh5oFFXmA4HEmI//C9EzMIvvGm+lzwXkkUfak9X8FS1I42Dn3PMfgg9R0re031lwfK3tN9ZZTSR3sXOv4e5c3UsY85358EGl8jebT4ri57fkrgaaPtO/PgqGnZfIuKCahsczcLyBxBHArzgX081iG3OTmn4rwtjoG/KUGFjxgJcDwPIoOMk04oXQQVE3QHyCQwl5wh9iASNL2vY8r96ja9PR0tYYtn1vTYA1h3whMfWLQSMJzyNx4KkM3R5HOGF1snsN8Mg8Pw5jNejJsVlYGzbHqqV0Lxd0VVVxQyQu4tONzcXc4ZHuNwA8NF77PJHazhdrtmH+9aX7xWHkbtk6foz/wBrSfeIPnkX0LvI7bDRdx2aP72pfvFwk8mdoxi737P8Np0x+x6DxUW9+yamM2c6l8KuI/Y5cjRTNyJgPoqGe9BlRaehzfufpme9Ohzc4vpWe9BmUt1Wjoko1MX0rPergCjGIkOnOgBBDPxQSLUjcTrGci4Z2O896yPN8889bo83cSSXE6kqYsJkbvCQ2+ZAugoisbXPFEH0sE7IWWEVzxc5wzWed75Xl7yMtAHDJciVQlB3fI9zWM6nVzHWHvUOwzbx8pax3ABwsSs5KqSg2QTdUMmsSBcEOC64+eq8sld4KnLBLmfNKDS5y5ko42Oeq5koBOt9As1ZI5jQ1gs13n8+5dXEcVR1nCzxdvdqg8/hooWh1NJfqddvAqOjTdj7EHBF26PN2PsR0EoFy2wQc22xdbRQbZ28EUICIiAiIgIiICIiAiIg9e54KCWsFiERBQvZwA9qoZByHtREEYg7QKh1REF4aptsMptydZdDUwkH4Udbm0qUQQKqIOBEkZsLWLDY+nJUE8Yaxu8j6jr/ABDnnxyzREFHuic4kytzN/inL2KvwR/3rfVKIgrgi/XD1SgDGOBbOAf6JREFKgR4rxuvfXLRcURAREQEREBERAREQEREH//Z');
     display: flex;
@@ -23,32 +27,49 @@ header h1{
     letter-spacing: 1px;
     text-shadow: 2px 2px 8px(0,0,0,0.7);
 }
-nav{
+
+/* Barra de navegação */
+nav {
     display: flex;
     justify-content: center;
     background-color: #333;
     padding: 10px 0;
 }
-nav a{
+
+nav a {
     color: #fff;
     padding: 15px 20px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
     transition: background-color 0.3s ease;
-} nav a:hover{
-    background-color: #555;
-} section{
+}
 
+nav a:hover {
+    background-color: #555;
+}
+
+/* Seção principal para as páginas */
+section {
     padding: 50px 20px;
     text-align: center;
-} section p{
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
     font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
     color: #666;
 }
-.btn{
+
+/* Botão */
+.btn {
     display: inline-block;
     padding: 10px 30px;
     margin-top: 20px;
@@ -58,29 +79,96 @@ nav a{
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: background-color 0.3s ease;
-} .btn:hover {
+}
+
+.btn:hover {
     background-color: #555;
 }
-.sobre{
+
+/* Seção "Sobre nós" */
+.sobre {
     display: flex;
     justify-content: center;
     padding: 50px 0;
     background-color: #f4f4f4;
 }
-.sobre div{
+
+.sobre div {
     max-width: 400px;
     margin: 0 20px;
     text-align: left;
 }
-.sobre img{
-    width: 100px;
+
+.sobre img {
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-.sobre h3{
-    font-size: 1.5rem;
+
+.sobre h3 {
+    font-size: 2rem;
     margin-top: 20px;
 }
+
+/* Estilo para listas na página de Serviços */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #333;
+    text-align: left;
+}
+
+/* Estilo para o formulário na página de Contato */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: #555;
+}
+
+/* Rodapé */
 footer {
     background-color: #333;
     color: #fff;
@@ -105,19 +193,23 @@ footer a {
 footer a:hover {
     color: #ff6600;
 }
-}
+
+/* Estilo responsivo */
 @media (max-width: 768px) {
-    header{
+    header {
         height: 50vh;
     }
-    header h1{
+
+    header h1 {
         font-size: 2.5rem;
     }
-    .sobre{
+
+    .sobre {
         flex-direction: column;
         align-items: center;
     }
-    .sobre div{
+
+    .sobre div {
         margin-bottom: 20px;
     }
 }
