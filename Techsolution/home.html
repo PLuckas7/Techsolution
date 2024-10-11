@@ -8,27 +8,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <header>
+   <!-- Cabeçalho completo com menu de navegação, título e barra de pesquisa -->
+   <header class="main-header">
+    <div class="header-content">
+        <!-- Título do site -->
+        <div class="site-title">
             <h1>Techsolution</h1>
-        </header>
-    <nav>
-        <a href="home.html">Início</a>
-        <a href="sobre.html">Sobre Nós</a>
-        <a href="serviços.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-    </nav>
+        </div>
+
+        <!-- Navegação -->
+        <nav>
+            <a href="home.html">Início</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="serviços.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Digite para pesquisar..." />
+            <button onclick="searchSite()">Buscar</button>
+        </div>
+    </div>
+</header>
+
+    <!--Banner-->
+
     <div class="banner-container">
         <div class="banner-slide fade">
-            <img src="banner1.jfif" alt="Banner 1">
+            <img src="banner1.jpg" alt="Banner 1">
         </div>
         <div class="banner-text">Soluções Inovadoras</div>
     </div>
     <div class="banner-slide fade">
-        <img src="banner2.jfif" alt="Banner 2">
+        <img src="banner2.jpg" alt="Banner 2">
         <div class="banner-text">Estratégias de Sucesso</div>
     </div>
     <div class="banner-slide fade">
-        <img src="banner3.jfif" alt="Banner 3">
+        <img src="banner3.jpg" alt="Banner 3">
         <div class="banner-text">Tecnologia de Ponta</div>
     </div>
     <div>

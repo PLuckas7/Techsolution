@@ -67,3 +67,23 @@ if (form) {
         }
     });
 }
+function searchSite() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    
+    // Simulando um comportamento de busca
+    if (input === "") {
+        alert("Por favor, insira um termo de pesquisa.");
+    } else if (input.includes("serviços")) {
+        // Redireciona para a página de serviços (exemplo)
+        window.location.href = "servicos.html";
+    } else if (input.includes("sobre")) {
+        // Redireciona para a página sobre nós
+        window.location.href = "sobre.html";
+    } else if (input.includes("contato")) {
+        // Redireciona para a página de contato
+        window.location.href = "contato.html";
+    } else {
+        alert("Nenhum resultado encontrado para: " + input);
+    }
+}
+

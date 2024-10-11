@@ -10,18 +10,29 @@
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <h1>Techsolution</h1>
-    </header>
+   <!-- Cabeçalho completo com menu de navegação, título e barra de pesquisa -->
+   <header class="main-header">
+    <div class="header-content">
+        <!-- Título do site -->
+        <div class="site-title">
+            <h1>Techsolution</h1>
+        </div>
 
-    <!-- Navegação -->
-    <nav>
-        <a href="home.html">Início</a>
-        <a href="sobre.html">Sobre Nós</a>
-        <a href="serviços.html">Serviços</a>
-        <a href="contato.html">Contato</a>
-    </nav>
+        <!-- Navegação -->
+        <nav>
+            <a href="home.html">Início</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="serviços.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Digite para pesquisar..." />
+            <button onclick="searchSite()">Buscar</button>
+        </div>
+    </div>
+</header>
 
     <!-- Seção Sobre Nós -->
     <section>
