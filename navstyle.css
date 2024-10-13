@@ -16,7 +16,7 @@ body {
 
 /* Cabeçalho principal */
 .main-header {
-    background-color: #333;
+    background-color: black;
     color: white;
     padding: 20px 0;
     position: relative;
@@ -189,8 +189,8 @@ input[type="text"], input[type="email"], textarea {
 
 textarea {
     resize: none;
-    height: 150px;
-    width: 100px;
+    height: 300px;
+    width: 500px;
 }
 
 button[type="submit"] {

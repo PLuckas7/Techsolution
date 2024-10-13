@@ -1,3 +1,71 @@
+/* Estilo para as seções de serviços */
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Seção de serviços destacados */
+.featured-services {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+}
+
+.featured-services div {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.featured-service {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    width: 250px;
+}
+
+.featured-service h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.featured-service p {
+    font-size: 14px;
+}
+
+/* Seção de serviços recentes */
+.recent-services div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-item {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 250px;
+    text-align: center;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 14px;
+}
 
 
 
@@ -111,7 +179,7 @@ body{
 }
 /* Cabeçalho principal */
 .main-header {
-    background-color: #333;
+    background-color: black;
     color: white;
     padding: 20px 0;
     position: relative;
