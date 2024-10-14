@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <link rel="stylesheet" href="cat.css">
+</head>
+<body>
+     <!-- Cabeçalho completo com menu de navegação, título e barra de pesquisa -->
+   <header class="main-header">
+    <div class="header-content">
+        <!-- Título do site -->
+        <div class="site-title">
+            <h1>Techsolution</h1>
+        </div>
+
+        <!-- Navegação -->
+        <nav>
+            <a href="home.html">Início</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="serviços.html">Serviços</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+
+        <!-- Barra de Pesquisa -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Digite para pesquisar..." />
+            <button onclick="searchSite()">Buscar</button>
+        </div>
+    </div>
+</header>
+  
+
+    <!-- Conteúdo Detalhado -->
+    <section class="product-details">
+        <div id="product-details-container">
+            <!-- Detalhes do produto serão carregados aqui via JavaScript -->
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Seu Site Moderno. Todos os direitos reservados.</p>
+    </footer>
+   
+
+    <script>
+        // Simulação de banco de dados de serviços/produtos
+        const produtos = {
+            'desenvolvimento-web': {
+                title: "Desenvolvimento Web",
+                description: "Criação de websites modernos e responsivos para todas as plataformas.",
+                details: "Este serviço inclui design customizado, otimização de SEO, e suporte técnico contínuo.",
+                category: "Tecnologia",
+                date: "2024-10-07"
+            },
+            'suporte-tecnico': {
+                title: "Suporte Técnico",
+                description: "Assistência técnica e suporte 24 horas para empresas e clientes individuais.",
+                details: "Oferecemos suporte remoto, manutenção preventiva e corretiva de sistemas.",
+                category: "Tecnologia",
+                date: "2024-10-04"
+            },
+            'marketing-digital': {
+                title: "Marketing Digital",
+                description: "Aumente sua presença online com estratégias de marketing digital personalizadas.",
+                details: "Inclui criação de conteúdo, gerenciamento de redes sociais e campanhas de anúncios.",
+                category: "Tecnologia",
+                date: "2024-10-02"
+            }
+        };
+
+        // Função para obter o parâmetro da URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Função para carregar os detalhes do produto com base no parâmetro da URL
+        function loadProductDetails() {
+            const productKey = getQueryParam('produto');
+            const product = produtos[productKey];
+
+            if (product) {
+                const container = document.getElementById('product-details-container');
+                container.innerHTML = `
+                    <h2>${product.title}</h2>
+                    <p><strong>Descrição:</strong> ${product.description}</p>
+                    <p><strong>Detalhes:</strong> ${product.details}</p>
+                    <p><strong>Categoria:</strong> ${product.category}</p>
+                    <p><strong>Data de Publicação:</strong> ${new Date(product.date).toLocaleDateString('pt-BR')}</p>
+                `;
+            } else {
+                const container = document.getElementById('product-details-container');
+                container.innerHTML = '<p>Produto não encontrado.</p>';
+            }
+        }
+
+        // Carrega os detalhes do produto ao carregar a página
+        window.onload = loadProductDetails;
+    </script>
+    
+</body>
+</html>

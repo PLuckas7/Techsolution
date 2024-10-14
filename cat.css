@@ -1,0 +1,195 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho principal */
+.main-header {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    position: relative;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;  /* Distribui os elementos igualmente */
+    align-items: center;  /* Alinha verticalmente os elementos */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilo para o título do site */
+.site-title h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* Barra de Pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-bar button {
+    padding: 8px 15px;
+    background-color: #28A745;
+    color: white;
+    border: none;
+    font-size: 14px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #218838;
+}
+
+section{
+
+    padding: 50px 20px;
+    text-align: center;
+} section p{
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+} .btn:hover {
+    background-color: #555;
+}
+
+/* Seção de Categoria */
+.category-section {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-section h2 {
+    font-size: 28px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos Itens da Categoria */
+.category-item {
+    background-color: #fff;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.category-item:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.category-item p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.category-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.category-item a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Layout Responsivo */
+@media (max-width: 768px) {
+    .main-header .header-content {
+        flex-direction: column;
+    }
+
+    .category-item {
+        padding: 15px;
+    }
+
+    .category-section {
+        padding: 15px;
+    }
+
+    .main-header nav a {
+        margin: 10px 0;
+    }
+}
