@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Produto</title>
     <link rel="stylesheet" href="cat.css">
+    <link rel="stylesheet" href="darkmode.css">
+
 </head>
 <body>
      <!-- Cabeçalho completo com menu de navegação, título e barra de pesquisa -->
@@ -22,7 +24,8 @@
             <a href="serviços.html">Serviços</a>
             <a href="contato.html">Contato</a>
         </nav>
-
+        <!-- Botão para alternar entre temas -->
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
         <!-- Barra de Pesquisa -->
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Digite para pesquisar..." />
@@ -46,6 +49,51 @@
    
 
     <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Verifica se há preferência armazenada no LocalStorage
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        toggleButton.textContent = '☀️'; // Muda o ícone para o sol no Dark Mode
+    }
+
+    // Alterna entre modo claro e escuro
+    toggleButton.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        
+        // Atualiza o ícone
+        if (body.classList.contains('dark-mode')) {
+            toggleButton.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            toggleButton.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+
+        function searchSite() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    
+    // Simulando um comportamento de busca
+    if (input === "") {
+        alert("Por favor, insira um termo de pesquisa.");
+    } else if (input.includes("serviços")) {
+        // Redireciona para a página de serviços (exemplo)
+        window.location.href = "serviços.html";
+    } else if (input.includes("sobre")) {
+        // Redireciona para a página sobre nós
+        window.location.href = "sobre.html";
+    } else if (input.includes("contato")) {
+        // Redireciona para a página de contato
+        window.location.href = "contato.html";
+    } else {
+        alert("Nenhum resultado encontrado para: " + input);
+    }
+}
+        
         // Simulação de banco de dados de serviços/produtos
         const produtos = {
             'desenvolvimento-web': {

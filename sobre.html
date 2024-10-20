@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Techsolution</title>
     <link rel="stylesheet" href="navstyle.css">
+    <link rel="stylesheet" href="darkmode.css">
+
     
 </head>
 <body>
@@ -25,6 +27,8 @@
             <a href="serviços.html">Serviços</a>
             <a href="contato.html">Contato</a>
         </nav>
+        <!-- Botão para alternar entre temas -->
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
 
         <!-- Barra de Pesquisa -->
         <div class="search-bar">
@@ -47,6 +51,33 @@
             <p>desenvolvido por <a href="#">Techsolution</a></p>
         </footer>
     <script src="script.js"></script>
+    <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Verifica se há preferência armazenada no LocalStorage
+    const currentTheme = localStorage.getItem('theme');
+
+    if (currentTheme === 'dark') {
+        body.classList.add('dark-mode');
+        toggleButton.textContent = '☀️'; // Muda o ícone para o sol no Dark Mode
+    }
+
+    // Alterna entre modo claro e escuro
+    toggleButton.addEventListener('click', function () {
+        body.classList.toggle('dark-mode');
+        
+        // Atualiza o ícone
+        if (body.classList.contains('dark-mode')) {
+            toggleButton.textContent = '☀️';
+            localStorage.setItem('theme', 'dark');
+        } else {
+            toggleButton.textContent = '🌙';
+            localStorage.setItem('theme', 'light');
+        }
+    });
+</script>
+
 
 </body>
 </html>
