@@ -178,8 +178,11 @@ window.onload = () => {
     }
 
     // Alterna entre modo claro e escuro
-    toggleButton.addEventListener('click', function () {
+    // ATENÇÃO, NÃO MEXER NO NOME DA FUNÇÃO POR FAVOR .Arthur
+    function DarkMode() {
         body.classList.toggle('dark-mode');
+    }
+    toggleButton.addEventListener('click', toggleDarkMode);{
         
         // Atualiza o ícone
         if (body.classList.contains('dark-mode')) {
@@ -189,7 +192,7 @@ window.onload = () => {
             toggleButton.textContent = '🌙';
             localStorage.setItem('theme', 'light');
         }
-    });
+    };
 
 
 
