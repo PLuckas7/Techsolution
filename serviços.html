@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!--Meta-dados-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,36 +26,9 @@
             <a href="serviços.html">Serviços</a>
             <a href="contato.html">Contato</a>
         </nav>
-          <!-- Botão para alternar entre temas -->
-          <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+        <!-- Botão para alternar entre temas -->
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
 
-          <script>
-              const toggleButton = document.getElementById('theme-toggle');
-              const body = document.body;
-          
-              // Verifica se há preferência armazenada no LocalStorage
-              const currentTheme = localStorage.getItem('theme');
-          
-              if (currentTheme === 'dark') {
-                  body.classList.add('dark-mode');
-                  toggleButton.textContent = '☀️'; // Muda o ícone para o sol no Dark Mode
-              }
-          
-              // Alterna entre modo claro e escuro
-              toggleButton.addEventListener('click', function () {
-                  body.classList.toggle('dark-mode');
-                  
-                  // Atualiza o ícone
-                  if (body.classList.contains('dark-mode')) {
-                      toggleButton.textContent = '☀️';
-                      localStorage.setItem('theme', 'dark');
-                  } else {
-                      toggleButton.textContent = '🌙';
-                      localStorage.setItem('theme', 'light');
-                  }
-              });
-              </script>
-              
         <!-- Barra de Pesquisa -->
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Digite para pesquisar..." />
@@ -68,7 +40,6 @@
       <section class="category-section">
         <h2>Serviços em Tecnologia</h2>
         <div id="category-items">
-            
             <!-- Artigos/Produtos/Serviços pertencentes à categoria 'Tecnologia' -->
             <div class="category-item">
                 <h3><a href="produto-detalhe.html?produto=desenvolvimento-web">Desenvolvimento Web</a></h3>
@@ -94,6 +65,6 @@
         <p>desenvolvido por <a href="#">Techsolution</a></p>
     </footer>
     <script src="script.js"></script>
-
+    <script src="dark.js"></script>
 </body>
 </html>
