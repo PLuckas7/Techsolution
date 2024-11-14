@@ -206,7 +206,28 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #555;
 }
+/* Titulo pro mapa */
+.titulomap {
+    text-align: center;
+    font-size: 26pt;
+}
 
+/* MAPA */
+#map {
+    width: 100%;
+    height: 300px;
+}
+
+#map-container {
+    width: 100%;
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 10px; 
+    border: 2px solid #ccc;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background-color: #f9f9f9; 
+}
 /* Rodapé */
 footer {
     background-color: #333;
