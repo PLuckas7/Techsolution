@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes do Produto</title>
-    <link rel="stylesheet" href="cat.css">
-    <link rel="stylesheet" href="darkmode.css">
+    <link rel="stylesheet" href="cat.css"> <!--Script do CSS-->
+    <link rel="stylesheet" href="darkmode.css"> <!--Script do css DARKMODE-->
 
 </head>
 <body>
@@ -49,8 +49,9 @@
         <p>&copy; 2024 Seu Site Moderno. Todos os direitos reservados.</p>
     </footer>
    
-
+    
     <script>
+        // Script do DARKMODE
     const toggleButton = document.getElementById('theme-toggle');
     const body = document.body;
 
@@ -75,7 +76,7 @@
             localStorage.setItem('theme', 'light');
         }
     });
-
+    //Script para redirecionamento pros serviços
         function searchSite() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     
@@ -150,6 +151,8 @@
         // Carrega os detalhes do produto ao carregar a página
         window.onload = loadProductDetails;
     </script>
+
+    <!--Link do script DARKMODE-->
     <script src="dark.js"></script>
 </body>
 </html>
