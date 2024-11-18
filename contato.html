@@ -46,19 +46,42 @@
     <section>
         <h2>Entre em Contato</h2>
         <p>Preencha o formulário abaixo para nos enviar uma mensagem:</p>
-        <form>
+        <form id="contactForm" onsubmit="return enviarEmail(event)">
             <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome"><br><br>
+            <input type="text" id="nome" name="nome" required><br><br>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
+            <label for="email">Seu Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
 
             <label for="mensagem">Mensagem:</label><br>
-            <textarea id="mensagem" name="mensagem"></textarea><br><br>
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
 
+            <!-- Botão estilizado -->
             <button type="submit" class="btn">Enviar</button>
         </form>
     </section>
+
+    <script>
+        function enviarEmail(event) {
+            event.preventDefault(); // Evita o envio padrão do formulário
+
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const mensagem = document.getElementById('mensagem').value;
+
+            if (nome && email && mensagem) {
+                const destinatario = "projetoteste42@gmail.com"; // Email fixo
+                const assunto = `Mensagem de ${nome}`;
+                const corpoMensagem = `Nome: ${nome}%0AEmail do remetente: ${email}%0AMensagem:%0A${encodeURIComponent(mensagem)}`;
+                
+                // URL do Gmail com destinatário fixo
+                const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=${destinatario}&su=${encodeURIComponent(assunto)}&body=${corpoMensagem}`;
+                window.open(gmailUrl, '_blank');
+            } else {
+                alert('Por favor, preencha todos os campos!');
+            }
+        }
+    </script>
     <br>
     <!--Título MAPA-->
     <h2 class="titulomap">Nos Visite</h2>
